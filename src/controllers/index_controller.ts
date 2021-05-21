@@ -29,7 +29,7 @@ export const createEmployee = async (req : Request,res : Response) :Promise<Resp
     const {name,salary}=req.body;
     const response : QueryResult=await pool.query("INSERT INTO employee (name,salary) VALUES ($1,$2)", [name,salary]);
     return res.json({
-        message :"Employee Successfully Added",
+        message :"Employee Successfully Added!!",
         body : {
             employee : {
                 name,
