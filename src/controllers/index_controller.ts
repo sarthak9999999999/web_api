@@ -46,7 +46,7 @@ export const updateEmployee = async (req : Request,res : Response) :Promise<Resp
     const {name,salary} =req.body;
 
     await pool.query("UPDATE employee SET name =$1 , salary = $2, id=$3",[name,salary,id]);
-    return res.json("Updated Sucessfully");
+    return res.json("Updated Sucessfully!");
 
     
 }
